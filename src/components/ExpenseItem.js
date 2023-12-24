@@ -1,6 +1,7 @@
 import "./ExpenseItem.css";
 
 export default function ExpenseItem() {
+  //this is how we create variables in JSX file
   const itemName = "car insurance";
   const itemPrice = "3000";
   const newDate = new Date();

@@ -1,3 +1,4 @@
+/* we're using this file in same folder*/
 .expense-item {
   display: flex;
   justify-content: space-between;
