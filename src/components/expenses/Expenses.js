@@ -1,7 +1,9 @@
-import "./App.css";
-import ExpenseItem from "./components/ExpenseItem";
+import React from 'react';
+import Card from "../UI/Card";
+import ExpenseItem from "./ExpenseItem";
+import "./Expenses.css";
 
-function App() {
+export default function Expenses(props) {
   const expenses = [
     {
       title: "Car insurance",
@@ -31,19 +33,17 @@ function App() {
 
   return (
     <>
-    <div>
-      {expenses.map((values, index) => (
-        <ExpenseItem
-        key = {index}
-        itemName={values.title}
-        itemPrice={values.amount}
-        locationOfExpenditure={values.location}
-        dateOfExpenditure={values.date}
-      />
-      ))}
-    </div>
+      <Card className="expenses">
+        {expenses.map((values, index) => (
+          <ExpenseItem
+            key={index}
+            itemName={values.title}
+            itemPrice={values.amount}
+            locationOfExpenditure={values.location}
+            dateOfExpenditure={values.date}
+          />
+        ))}
+      </Card>
     </>
   );
 }
-
-export default App;

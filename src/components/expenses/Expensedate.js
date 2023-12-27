@@ -1,4 +1,5 @@
 import "./ExpenseItem.css";
+import React from 'react';
 
 export default function Expensedate(props){
 
