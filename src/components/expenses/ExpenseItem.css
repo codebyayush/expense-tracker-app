@@ -11,6 +11,75 @@
   justify-content: center;
 }
 
+
+/* Delete button style */
+.delete-button {
+  height: 30px;
+  margin-top: 35px;
+  margin-right: 0px;
+  display: inline-block;
+  padding: 0px 12px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 2px solid #d9534f; /* Bootstrap red color for border */
+  color: #d9534f; /* Bootstrap red color for text */
+  background-color: white; /* Transparent background */
+  border-radius: 4px; /* Optional: Add border-radius for rounded corners */
+}
+
+/* Hover effect */
+.delete-button:hover {
+  background-color: #d9534f; /* Bootstrap red color on hover */
+  color: #fff; /* White text on hover */
+}
+
+/* Active (clicked) effect */
+.delete-button:active,
+.delete-button:focus {
+  background-color: #ec2821; /* Slightly darker red on active/focus */
+  border-color: #ac2925; /* Slightly darker border color on active/focus */
+  color: #fff; /* White text on active/focus */
+}
+
+/* Delete button style */
+.edit-button {
+  height: 30px;
+  margin-top: 35px;
+  margin-right: 0px;
+  display: inline-block;
+  padding: px 12px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 2px solid #fcfcfc; /* Bootstrap red color for border */
+  color: #ffffff; /* Bootstrap red color for text */
+  background-color: white; /* Transparent background */
+  border-radius: 4px; /* Optional: Add border-radius for rounded corners */
+}
+
+/* Hover effect */
+.edit-button:hover {
+  background-color: #4f66d9; /* Bootstrap red color on hover */
+  color: #fff; /* White text on hover */
+}
+
+/* Active (clicked) effect */
+.edit-button:active,
+.edit-button:focus {
+  background-color:#4f66d9; /* Slightly darker red on active/focus */
+  border-color: #ffffff; /* Slightly darker border color on active/focus */
+  color: #c2c2c2; /* White text on active/focus */
+}
+
 .expense-date__month {
   font-size: 0.75rem;
   font-weight: bold;
