@@ -1,46 +1,33 @@
-import React from 'react';
+import React, { useState } from "react";
 import Card from "../UI/Card";
 import ExpenseItem from "./ExpenseItem";
 import "./Expenses.css";
+import ExpenseList from "./ExpenseObj.js";
 
 export default function Expenses(props) {
-  const expenses = [
-    {
-      title: "Car insurance",
-      amount: 3000,
-      date: new Date(2023, 5, 12),
-      location: "Indore",
-    },
-    {
-      title: "New car",
-      amount: 3000000,
-      date: new Date(2023, 5, 12),
-      location: "Pune",
-    },
-    {
-      title: "Coconuts",
-      amount: 2000,
-      date: new Date(2023, 5, 1),
-      location: "Hyderabad",
-    },
-    {
-      title: "Chocolates",
-      amount: 2500,
-      date: new Date(2022, 8, 12),
-      location: "Indore",
-    },
-  ];
+  //using useState method to update the list after deleteExpense() is called.
+  const [expenses, setExpenses] = useState(ExpenseList);
+
+  // Function to delete expenses, it takes expenseID to filter the element.
+  const deleteExpense = (expenseID) => {
+    const updatedExpense = expenses.filter(
+      (expense) => expense.id !== expenseID
+    );
+    setExpenses(updatedExpense);
+  };
 
   return (
     <>
       <Card className="expenses">
-        {expenses.map((values, index) => (
+        {expenses.map((values) => (
           <ExpenseItem
-            key={index}
+            key={values.id}
+            id={values.id}
             itemName={values.title}
             itemPrice={values.amount}
             locationOfExpenditure={values.location}
             dateOfExpenditure={values.date}
+            deleteExpense={deleteExpense}
           />
         ))}
       </Card>
