@@ -1,0 +1,47 @@
+.input-details {
+  font-family: 'Poppins';
+  display: flex;
+  height: auto;
+  max-width: 800px;
+  box-sizing: border-box;
+  padding-top: 20px;
+  padding: 1rem;
+  margin: auto;
+  background-color: #4b4b4b;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.textNames {
+  color: whitesmoke;
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+#addBtn {
+  background-color: #36393f;
+  border-radius: 2pc;
+}
+
+.inputClass {
+  border-radius: 10px;
+  height: 30px;
+}
+
+#addBtn {
+    font-weight: 700;
+    position: relative;
+    top:50%;
+    background-color: rgb(38, 38, 38);
+    color: #fff;
+    border:none; 
+    border-radius:10px; 
+    padding:15px;
+    min-height:30px; 
+    min-width: 120px;
+    transition: 0.7s;  /*it'll slower the color changing on hover*/
+}
+#addBtn:hover {  
+  background-color: rgb(15, 106, 216); /* Bootstrap red color on hover */
+  color: #fff; /* White text on hover */  
+}

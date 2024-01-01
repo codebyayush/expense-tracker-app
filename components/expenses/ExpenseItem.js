@@ -2,12 +2,18 @@ import Card from "../UI/Card.js";
 import Expensedate from "./Expensedate";
 import Expensedetails from "./Expensedetails";
 import "./ExpenseItem.css";
-import React from "react";
+import React, {useState} from "react";
 
 export default function ExpenseItem(props) {
   //impnote: here props.deleteExpense is the function which is inside Expenses.js component.
+  const [price, setPrice] = useState(props.itemPrice);
+
   const deleteExpenseHandler = (itemID) => {
     props.deleteExpense(itemID);
+  };
+
+  const clickHandler = () => {
+    setPrice('100');
   };
 
   return (
@@ -15,7 +21,7 @@ export default function ExpenseItem(props) {
       <Card className="expense-item">
         <Expensedate date={props.dateOfExpenditure} />
         <Expensedetails
-          amount={props.itemPrice}
+          amount={price}
           location={props.locationOfExpenditure}
           title={props.itemName}
         />
@@ -28,6 +34,16 @@ export default function ExpenseItem(props) {
           }}
         >
           Delete
+        </button>
+        <button
+          type="button"
+          className="edit-button"
+          id="editBtn"
+          onClick={() => {
+            clickHandler();
+          }}
+        >
+          Change Price
         </button>
       </Card>
     </>
