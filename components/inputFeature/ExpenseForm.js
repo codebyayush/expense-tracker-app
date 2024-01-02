@@ -8,7 +8,6 @@ export default function Inputs(props) {
   const [newlocation, setLocation] = useState("");
   const [newdate, setDate] = useState("");
   const [newprice, setPrice] = useState("");
-
   // const [userInput, setUserInput] = useState({
   //     title: '',
   //     location: '',
@@ -106,9 +105,15 @@ export default function Inputs(props) {
             required
           />
           <br />
-          <button type="submit" className="textNames" id="addBtn">
+          <div>
+            <button onClick={props.onCancel} id="cancelBtn">
+              Cancel
+            </button>
+          <button type="submit" className="textNames" id="addBtn" >
             Add Expense
           </button>
+
+          </div>
         </Card>
       </form>
     </>

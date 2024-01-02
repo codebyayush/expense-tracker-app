@@ -29,19 +29,38 @@
 }
 
 #addBtn {
+    display:inline;
     font-weight: 700;
-    position: relative;
+    position:relative;
     top:50%;
     background-color: rgb(38, 38, 38);
     color: #fff;
     border:none; 
     border-radius:10px; 
     padding:15px;
-    min-height:30px; 
-    min-width: 120px;
+    max-width: fit-content;
     transition: 0.7s;  /*it'll slower the color changing on hover*/
 }
 #addBtn:hover {  
   background-color: rgb(15, 106, 216); /* Bootstrap red color on hover */
   color: #fff; /* White text on hover */  
+}
+
+#cancelBtn {
+  display:inline;
+  font-weight: 700;
+  margin-right: 12px;
+  position:relative;
+  top:50%;
+  background-color: rgb(38, 38, 38);
+  color: #fff;
+  border:none; 
+  border-radius:10px; 
+  padding:15px;
+  max-width: fit-content;
+  transition: 0.7s;  /*it'll slower the color changing on hover*/
+}
+#cancelBtn:hover {  
+background-color: rgba(255, 0, 0, 0.653); /* Bootstrap red color on hover */
+color: #fff; /* White text on hover */  
 }
